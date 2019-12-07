@@ -1,0 +1,491 @@
+@import 'mixin.scss';
+@import 'colors.scss';
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+//   header
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1060px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header_box {
+    display: flex;
+    height: 90px;
+    align-items: center;
+}
+.logo {
+    @include font (38px, bold, $grey, uppercase);
+}
+.logo::after {
+    content: 'BRA';
+    color: $sea;
+}
+.menu {
+    margin-left: auto;
+}
+.menu_list {
+    width: 30%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.list_link {
+    text-decoration: none;
+    @include font(18px, 400, $light-grey, none);
+}
+.list_item {
+    padding: 40px 20px 24px 20px;
+    transition: all 0.3s;
+}
+.list_item:hover {
+    color: white;
+    background-color: $red;
+}
+.list_item {
+    position: relative;
+}
+.drop_menu {
+    position: absolute;
+    list-style: none;
+    margin-top: 28px;
+    background-color: $red;
+    max-width: 540px;
+    justify-content: space-evenly;
+    display: none;
+    left: 0;
+}
+.list_item:hover .list_link {
+    color: white;
+}
+.list_item:hover .drop_menu {
+    display: flex;
+}
+.tie {
+    background-image: url('../images/tie.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.drop_item {
+    padding: 10px 20px;
+    width: 190px;
+}
+.drop_link {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding-bottom: 15px;
+    transition: all 0.3s;
+}
+.drop_link:hover {
+    text-decoration: underline;
+}
+.tie_brand {
+    background-image: url('../images/brand.png');
+    background-size: contain;
+}
+.list_item:last-child .drop_menu {
+    margin-top: 24px;
+}
+.list_item:last-child .list_link {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+// board
+.board {
+    width: 100%;
+    background-image: url('../images/zebra.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.board_wrap {
+    background-color: rgba(6, 181, 169, 0.5);
+    text-align: center;
+    padding-top: 260px;
+    padding-bottom: 160px;
+}
+.pretitle {
+    @include font (22px, 400, white, uppercase);
+    letter-spacing: 30px;
+}
+.title_main {
+    @include font (116px, 400, white, uppercase);
+    margin-top: 25px;
+}
+// shopping
+.shopping {
+    padding: 40px 0;
+}
+.shopping_list {
+    display: flex;
+    justify-content: space-between;
+}
+.shopping_card {
+    display: flex;
+    flex-direction: column;
+    background-color: $sea;
+    width: 245px;
+    height: 250px;
+    padding: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: border-color 0.3s;
+    background-image: url('../images/activitee.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.shopping_card:hover {
+    border-color: $grey;
+}
+.shopping_card_title {
+    @include font (30px, 700, white, uppercase);
+    margin: 0;
+}
+.shopping_card_text {
+    @include font (24px, 700, white, uppercase);
+    margin: 0;
+}
+.shopping_card_price {
+    @include font (49px, 700, $dark-sea, uppercase);
+    margin: 0;
+}
+.shopping_card:nth-child(2) {
+    background-color: $beige;
+    background-image: url('../images/secondt.png');
+    background-position: right bottom;
+}
+.shopping_card:nth-child(2) .shopping_card_price {
+    color: $brown;
+}
+.shopping_card:nth-child(3) {
+    background-color: $pink;
+    background-image: url('../images/thirdt.png');
+    background-position: right bottom;
+}
+.shopping_card:nth-child(3) .shopping_card_price {
+    color: $grey;
+}
+.shopping_card:last-child {
+    background-color: $yellow;
+    padding: 10px 0;
+    background-image: none;
+}
+.shopping_card:last-child .shopping_card_title {
+    @include font (80px, 700, white, uppercase);
+    padding-left: 20px;
+    height: 80px;
+}
+.shopping_card:last-child .shopping_card_text {
+    @include font (60px, 700, white, uppercase);
+    padding-left: 20px;
+}
+.shopping_card:last-child .shopping_card_price {
+    @include font (26px, 700, $yellow, uppercase);
+    padding: 10px 20px;
+    width: 70%;
+    background-color: white;
+}
+// categories
+.categories {
+    background-image: url('../images/zebra2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.categories_wrap {
+    background-color: rgba(238, 134, 255, 0.5);
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 75px;
+}
+.categories_image {
+    background-image: url('../images/clothes.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 300px;
+    width: 100%;
+    margin-top: 65px;
+}
+// levis
+.levis_wrap {
+    display: flex;
+}
+.levis_info {
+    width: 70%;
+    position: relative;
+}
+.brand {
+    background-image: url('../images/main_brand.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:-15px;
+    position: absolute;
+    width: 350px;
+    height: 171px;
+}
+.levis_title {
+    @include font (50px, 700, black, none);
+    margin-top: 200px;
+}
+.levis_text {
+    @include font (14px, 400, black, none);
+    line-height: 20px;
+    margin-top: 25px;
+}
+.levis_trade {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.rate {
+    @include font (36px, 700, black, none);
+}
+.add_link {
+    @include font (28px, 400, white, none);
+    line-height: 20px;
+    text-decoration: none;
+    background-color: $red;
+    padding: 15px 20px;
+    border: 1px solid white;
+    transition: all 0.3s;
+}
+.add_link:hover {
+    background-color: black;
+    border-color: red;
+}
+.add_link::before {
+    content: url('../images/cart.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+.big_jeans {
+    background-image: url('../images/big_jeans.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin-top: 50px;
+}
+// jeans
+.jeans_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 65px;
+}
+.jeans_card {
+    text-align: center;
+    width: 177px;
+}
+.jeans_link {
+    display: block;
+    background-image: url('../images/big_jeans.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 170px;
+    border: 1px solid $light-grey;
+    transition: border-color 0.3s;
+}
+.jeans_link:hover {
+    border-color: black;
+}
+// footer
+.footer {
+    background-color: $dark-blue;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.address {
+    @include font (16px, 400, $grey, none);
+    font-style: normal;
+    margin-top: 15px;
+}
+.footer_right {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon_link {
+    transition: all 0.3s;
+}
+.svg {
+    fill: white;
+}
+.icon_link:hover .svg {
+    fill: $sea;
+}
+@media screen and (max-width: 1232px) {
+    //   header
+    .menu {
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 955px) {
+    // header
+    .header_box {
+        height: auto;
+        flex-direction: column;
+    }
+    .logo {
+        padding-top: 20px;
+    }
+    .menu {
+        margin: 0;
+    }
+    .menu_list {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    .drop_item {
+        padding: 5px 0px;
+        width: 150px;
+    }
+    // board
+    .board_wrap {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+    // shopping
+    .shopping_list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    // categories
+    .title_main {
+        font-size: 100px;
+    }
+    // levis
+    .big_jeans {
+        background-size: 100% 60%;
+    }
+    // jeans
+    .jeans_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    // footer
+    .footer_wrap {
+        align-items: center;
+    }
+    .footer_right {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 768px) {
+    // header
+    .menu {
+        width: 100%;
+    }
+    .menu_list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    .list_link {
+        @include font(13px, 400, $light-grey, none);
+    }
+    .cart {
+        width: 20px;
+    }
+    .list_item {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 15px;
+    }
+    .list_item:last-child .list_link {
+        width: 60px;
+    }
+    .drop_item {
+        display: none;
+    }
+    // board
+    .board_wrap {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .pretitle {
+        font-size: 30px;
+        letter-spacing: 3px
+    }
+    .title_main {
+        font-size: 50px;
+    }
+    // categories
+    .categories_wrap .title_main {
+        font-size: 45px;
+        text-align: center;
+    }
+    .categories_image {
+        margin-top: 30px;
+        height: 100px;
+    }
+    // levis
+    .brand {
+        width: 280px;
+    }
+    .levis_wrap {
+        flex-wrap: wrap;
+    }
+    .levis_info {
+        width: 100%;
+    }
+    .levis_title {
+        margin-top: 150px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .levis_trade {
+        justify-content: space-evenly;
+        margin-top: 30px;
+        align-items: baseline;
+    }
+    .rate {
+        font-size: 20px;
+    }
+    .add_link {
+        font-size: 14px;
+        padding: 15px 10px 10px 10px;
+        border-radius: 15px;
+    }
+    .add_link::before {
+        margin-right: 5px;
+    }
+    // jeans
+    .jeans_wrap {
+        padding: 0px;
+    }
+    // footer
+    .address {
+        font-size: 14px;
+    }
+    .footer_right {
+        width: 200px;
+        justify-content: space-around;
+    }
+    .svg {
+        width: 30px;
+    }
+}
