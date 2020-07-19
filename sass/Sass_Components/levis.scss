@@ -1,0 +1,60 @@
+.levis_wrap {
+    display: flex;
+}
+.levis_info {
+    width: 70%;
+    position: relative;
+}
+.brand {
+    background-image: url('../images/main_brand.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top:-15px;
+    position: absolute;
+    width: 350px;
+    height: 171px;
+}
+.levis_title {
+    @include font (50px, 700, black, none);
+    margin-top: 200px;
+}
+.levis_text {
+    @include font (14px, 400, black, none);
+    line-height: 20px;
+    margin-top: 25px;
+}
+.levis_trade {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.rate {
+    @include font (36px, 700, black, none);
+}
+.add_link {
+    @include font (28px, 400, white, none);
+    line-height: 20px;
+    text-decoration: none;
+    background-color: $red;
+    padding: 15px 20px;
+    border: 1px solid white;
+    transition: all 0.3s;
+    &:hover {
+        background-color: black;
+        border-color: red;
+    }
+    &::before {
+        content: url('../images/cart.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+    }
+}
+.big_jeans {
+    background-image: url('../images/big_jeans.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+    margin-top: 50px;
+}

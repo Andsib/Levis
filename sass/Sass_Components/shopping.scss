@@ -1,0 +1,73 @@
+.shopping {
+    padding: 40px 0;
+}
+.shopping_list {
+    display: flex;
+    justify-content: space-between;
+}
+.shopping_card {
+    display: flex;
+    flex-direction: column;
+    background-color: $sea;
+    width: 245px;
+    height: 250px;
+    padding: 20px;
+    justify-content: space-between;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: border-color 0.3s;
+    background-image: url('../images/activitee.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    &:hover {
+        border-color: $grey;
+    }
+}
+.shopping_card_title {
+    @include font (30px, 700, white, uppercase);
+    margin: 0;
+}
+.shopping_card_text {
+    @include font (24px, 700, white, uppercase);
+    margin: 0;
+}
+.shopping_card_price {
+    @include font (49px, 700, $dark-sea, uppercase);
+    margin: 0;
+}
+.shopping_card:nth-child(2) {
+    background-color: $beige;
+    background-image: url('../images/secondt.png');
+    background-position: right bottom;
+}
+.shopping_card:nth-child(2) .shopping_card_price {
+    color: $brown;
+}
+.shopping_card:nth-child(3) {
+    background-color: $pink;
+    background-image: url('../images/thirdt.png');
+    background-position: right bottom;
+}
+.shopping_card:nth-child(3) .shopping_card_price {
+    color: $grey;
+}
+.shopping_card:last-child {
+    background-color: $yellow;
+    padding: 10px 0;
+    background-image: none;
+}
+.shopping_card:last-child .shopping_card_title {
+    @include font (80px, 700, white, uppercase);
+    padding-left: 20px;
+    height: 80px;
+}
+.shopping_card:last-child .shopping_card_text {
+    @include font (60px, 700, white, uppercase);
+    padding-left: 20px;
+}
+.shopping_card:last-child .shopping_card_price {
+    @include font (26px, 700, $yellow, uppercase);
+    padding: 10px 20px;
+    width: 70%;
+    background-color: white;
+}

@@ -1,0 +1,28 @@
+.footer {
+    background-color: $dark-blue;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.address {
+    @include font (16px, 400, $grey, none);
+    font-style: normal;
+    margin-top: 15px;
+}
+.footer_right {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon_link {
+    transition: all 0.3s;
+}
+.svg {
+    fill: white;
+}
+.icon_link:hover .svg {
+    fill: $sea;
+}

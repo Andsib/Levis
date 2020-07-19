@@ -1,0 +1,21 @@
+.categories {
+    background-image: url('../images/zebra2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.categories_wrap {
+    background-color: rgba(238, 134, 255, 0.5);
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 75px;
+}
+.categories_image {
+    background-image: url('../images/clothes.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 300px;
+    width: 100%;
+    margin-top: 65px;
+}

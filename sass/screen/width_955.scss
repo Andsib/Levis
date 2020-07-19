@@ -1,0 +1,52 @@
+@media screen and (max-width: 955px) {
+    // header
+    .header_box {
+        height: auto;
+        flex-direction: column;
+    }
+    .logo {
+        padding-top: 20px;
+    }
+    .menu {
+        margin: 0;
+    }
+    .menu_list {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+    .drop_item {
+        padding: 5px 0px;
+        width: 150px;
+    }
+    // board
+    .board_wrap {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
+    // shopping
+    .shopping_list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    // categories
+    .title_main {
+        font-size: 100px;
+    }
+    // levis
+    .big_jeans {
+        background-size: 100% 60%;
+    }
+    // jeans
+    .jeans_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    // footer
+    .footer_wrap {
+        align-items: center;
+    }
+    .footer_right {
+        width: 20%;
+    }
+}

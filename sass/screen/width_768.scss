@@ -1,0 +1,98 @@
+@media screen and (max-width: 768px) {
+    // header
+    .menu {
+        width: 100%;
+    }
+    .menu_list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    .list_link {
+        @include font(13px, 400, $light-grey, none);
+    }
+    .cart {
+        width: 20px;
+    }
+    .list_item {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 15px;
+    }
+    .list_item:last-child .list_link {
+        width: 60px;
+    }
+    .drop_item {
+        display: none;
+    }
+    // board
+    .board_wrap {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .pretitle {
+        font-size: 30px;
+        letter-spacing: 3px
+    }
+    .title_main {
+        font-size: 50px;
+    }
+    // categories
+    .categories_wrap .title_main {
+        font-size: 45px;
+        text-align: center;
+    }
+    .categories_image {
+        margin-top: 30px;
+        height: 100px;
+    }
+    // levis
+    .brand {
+        width: 280px;
+    }
+    .levis_wrap {
+        flex-wrap: wrap;
+    }
+    .levis_info {
+        width: 100%;
+    }
+    .levis_title {
+        margin-top: 150px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .levis_trade {
+        justify-content: space-evenly;
+        margin-top: 30px;
+        align-items: baseline;
+    }
+    .rate {
+        font-size: 20px;
+    }
+    .add_link {
+        font-size: 14px;
+        padding: 15px 10px 10px 10px;
+        border-radius: 15px;
+        &::before {
+            margin-right: 5px;
+        }
+    }
+    // jeans
+    .jeans_wrap {
+        padding: 0px;
+    }
+    // footer
+    .address {
+        font-size: 14px;
+    }
+    .footer_right {
+        width: 200px;
+        justify-content: space-around;
+    }
+    .svg {
+        width: 30px;
+    }
+}

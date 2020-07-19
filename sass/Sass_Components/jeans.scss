@@ -1,0 +1,23 @@
+.jeans_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 65px;
+}
+.jeans_card {
+    text-align: center;
+    width: 177px;
+}
+.jeans_link {
+    display: block;
+    background-image: url('../images/big_jeans.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 175px;
+    height: 170px;
+    border: 1px solid $light-grey;
+    transition: border-color 0.3s;
+    &:hover {
+        border-color: black;
+    }
+}
